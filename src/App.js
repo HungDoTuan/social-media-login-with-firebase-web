@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { LoginScreen } from "./components/LoginScreen.jsx";
+import { LoginGoogle } from "./components/LoginGoogle";
+import { PhoneNumberLogin } from "./components/PhoneNumberLogin";
+import { LoginFacebook } from "./components/LoginFacebook";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginScreen />} />
+        <Route path="/google-account" element={<LoginGoogle />} />
+        <Route path="/phone-number-log-in" element={<PhoneNumberLogin />} />
+        <Route path="/facebook-account" element={<LoginFacebook />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
