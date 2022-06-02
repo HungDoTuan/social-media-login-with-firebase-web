@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { LoginScreen } from "./components/LoginScreen.jsx";
 import { LoginGoogle } from "./components/LoginGoogle";
-import { PhoneNumberLogin } from "./components/PhoneNumberLogin";
+import { PhoneNumberLogin } from "./components/phone-number-login/PhoneNumberLogin";
 import { LoginFacebook } from "./components/LoginFacebook";
 
 function App() {
